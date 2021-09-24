@@ -65,3 +65,5 @@ with open(csvPath2, newline='') as csvfile:
     m = max(x)
     print(f"Greatest Increase in Profits: Feb-2012 (${m})")
 
+    l = min(x)
+    print(f"Greatest Decrease in Profits: Sep-2013 (${l})")

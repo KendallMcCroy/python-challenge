@@ -67,3 +67,23 @@ with open(csvPath2, newline='') as csvfile:
 
     l = min(x)
     print(f"Greatest Decrease in Profits: Sep-2013 (${l})")
+
+
+# now write this to an output file
+
+f = open("budget_data_results.tet", "w")
+f.write("Financial Analysis")
+f.write('\n')
+f.write("---------------------------")
+f.write('\n')
+f.write("Total Months: {len(month_total)}")
+f.write('\n')
+# f"Total Months: {len(month_total)}"
+# f.write('\n')
+f.write("Total: ${total}")
+f.write('\n')
+f.write(f"Average  Change: ${average(x):.2f}")
+f.write('\n')
+f.write(f"Greatest Decrease in Profits: Sep-2013 (${l})")
+f.write('\n')
+f.write(f"Greatest Decrease in Profits: Sep-2013 (${l})")

@@ -27,17 +27,23 @@ with open(file_path) as edcsv_file:
 
 print(f"Total Votes: {len(vote_total)}") 
 
-
-# # Complete a list of candidates who received votes
-candidates = []
-candidate_votes = []
-
+# Create a line of dashes to seperate the title from the election results
+line = "-----------------------"
+print(line)
 
 
+with open(file_path, newline='') as csvfile:
+    headerline = csvfile.__next__()
+    month_total = csvfile.readlines()
 
-# with open(election_data_csv) as edcsv_file:
-#     # Csv reader specifies delimiter and variable that holds contents
-#     csvreader = csv.reader(edcsv_file, delimiter=',')
+with open(election_data_csv) as edcsv_file:
+    # Csv reader specifies delimiter and variable that holds contents
+    csvreader = csv.reader(edcsv_file, delimiter=',')
+
+    # Complete a list of candidates who received votes
+    candidates = []
+    candidate_votes = []
+
 
 #     # print(csvreader)
 
@@ -49,12 +55,6 @@ candidate_votes = []
 #     print(csvreader[0])
 #     for row in csvreader:
 #         # print(row)
-
-
-
-
-
-
 
         # candidate_votes = candidate_votes + 1
 

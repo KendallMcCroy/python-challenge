@@ -72,6 +72,12 @@ with open( file_path, newline='' ) as csvFile:
 
     votes_total = len(votes)
 
+    khan_percentage = khan_amount / votes_total
+    correy_percentage = correy_amount / votes_total
+    li_percentage = li_amount / votes_total
+    otooley_percentage = otooley_amount / votes_total
+    
+    print(khan_percentage)
     print(otooley_amount)
 
 

@@ -21,9 +21,9 @@ print(line)
 
 
 # Get total votes
-with open(file_path) as edcsv_file:
-            headerline = edcsv_file.__next__() 
-            vote_total = edcsv_file.readlines()
+with open(file_path) as csvFile:
+            headerline = csvFile.__next__() 
+            vote_total = csvFile.readlines()
 
 print(f"Total Votes: {len(vote_total)}") 
 
@@ -31,29 +31,64 @@ print(f"Total Votes: {len(vote_total)}")
 line = "-----------------------"
 print(line)
 
-
-with open(file_path, newline='') as csvfile:
-    headerline = csvfile.__next__()
-    month_total = csvfile.readlines()
-
-with open(election_data_csv) as edcsv_file:
+with open( file_path, newline='' ) as csvFile:
     # Csv reader specifies delimiter and variable that holds contents
-    csvreader = csv.reader(edcsv_file, delimiter=',')
+    csvReader = csv.reader(csvFile, delimiter=',')
 
     # Complete a list of candidates who received votes
     candidates = []
+    candidate1 = []
     candidate_votes = []
+    header = next(csvReader)
+
+    # Created candidate list
+    for row in csvReader:
+        cd = row[2]
+        candidates.append(cd)
+        print(candidates)
 
 
-#     # print(csvreader)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#     # print(csvReader)
 
 #     # Read the head
-#     csv_header = next(csvreader)
+#     csv_header = next(csvReader)
 #     # print(f"CSV Header: {csv_header}")
 
 #     # Read each row of data after header
-#     print(csvreader[0])
-#     for row in csvreader:
+#     print(csvReader[0])
+#     for row in csvReader:
 #         # print(row)
 
         # candidate_votes = candidate_votes + 1
@@ -74,15 +109,15 @@ with open(election_data_csv) as edcsv_file:
         
 
 
-    #  with open(election_data_csv, newline='') as edcsv_file:
+    #  with open(election_data_csv, newline='') as csvFile:
 
-    #     csvreader = csv.reader(edcsv_file, delimiter=",")
+    #     csvReader = csv.reader(csvFile, delimiter=",")
     
-    #     for row in csvreader:
+    #     for row in csvReader:
         
 
 
-            # print(csvreader)
+            # print(csvReader)
 
 
 

@@ -84,4 +84,10 @@ print(f"Correy: {correy_percentage:.3%} ({correy_amount})")
 print(f"Li: {li_percentage:.3%} ({li_amount})")
 print(f"O'Tooley: {otooley_percentage:.3%} ({otooley_amount})")
 
+line = "-----------------------"
+print(line)
 
+print(f"Winner: Khan")
+
+line = "-----------------------"
+print(line)

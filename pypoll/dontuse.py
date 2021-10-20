@@ -45,9 +45,11 @@ with open( file_path, newline='' ) as csvFile:
     for row in csvReader:
         cd = row[2]
         candidates.append(cd)
-        print(candidates)
+      
 
-
+    # Remove dups from candidates
+    candidates = list(dict.fromkeys(candidates))
+    print(candidates)   
 
 
 

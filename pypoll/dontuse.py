@@ -76,22 +76,24 @@ with open( file_path, newline='' ) as csvFile:
     correy_percentage = correy_amount / votes_total
     li_percentage = li_amount / votes_total
     otooley_percentage = otooley_amount / votes_total
-    
-    print(khan_percentage)
-    print(otooley_amount)
+
+
+
+print(f"Khan: {khan_percentage} ({khan_amount})")
+print(f"Correy: {correy_percentage} ({correy_amount})")
+print(f"Li: {li_percentage} ({li_amount})")
+print(f"O'Tooley: {otooley_percentage} ({otooley_amount})")
 
 
 
 
 
 
-
-
-
-
-
-
-
+#From 34.31 in video 3.3
+# print(f'{candidates["name"][0]}')
+# print(f'{candidates["name"][1]}')
+# print(f'{candidates["name"][2]}')
+# print(f'{candidates["name"][3]}')
 
 
 

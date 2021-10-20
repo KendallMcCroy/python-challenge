@@ -37,19 +37,37 @@ with open( file_path, newline='' ) as csvFile:
 
     # Complete a list of candidates who received votes
     candidates = []
-    candidate1 = []
+    khan_amount = 0
+    correy_amount = 0
+    li_amount = 0
+    otooley_amount = 0
     candidate_votes = []
     header = next(csvReader)
 
     # Created candidate list
     for row in csvReader:
-        cd = row[2]
-        candidates.append(cd)
-      
 
-    # Remove dups from candidates
-    candidates = list(dict.fromkeys(candidates))
-    print(candidates)   
+        if row[2] == "Khan":
+            # Count
+            khan_amount = khan_amount + 1
+
+            # Sum
+            # khan_amount = khan_amount + int(row[0])
+
+        if row[2] == "Correy":
+            # Count
+            correy_amount = correy_amount + 1
+
+        if row[2] == "Li":
+            # Count
+            li_amount = li_amount + 1
+
+        if row[2] == "O'Tooley":
+            # Count
+            otooley_amount = otooley_amount + 1
+
+
+    print(otooley_amount)
 
 
 
@@ -153,5 +171,3 @@ with open( file_path, newline='' ) as csvFile:
 # print(f'{candidates["name"][1]}')
 # print(f'{candidates["name"][2]}')
 # print(f'{candidates["name"][3]}')
-
-#------------------------------------------------------------------------------------------------------

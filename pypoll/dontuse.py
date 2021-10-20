@@ -32,20 +32,24 @@ line = "-----------------------"
 print(line)
 
 with open( file_path, newline='' ) as csvFile:
+    headerline = csvFile.__next__() 
     # Csv reader specifies delimiter and variable that holds contents
     csvReader = csv.reader(csvFile, delimiter=',')
 
     # Complete a list of candidates who received votes
-    candidates = []
+    votes = []
     khan_amount = 0
+    khan_percentage = 0
     correy_amount = 0
+    correy_percentage = 0
     li_amount = 0
     otooley_amount = 0
     candidate_votes = []
-    header = next(csvReader)
 
     # Created candidate list
     for row in csvReader:
+        v = row[2]
+        votes.append(v)
 
         if row[2] == "Khan":
             # Count
@@ -66,6 +70,7 @@ with open( file_path, newline='' ) as csvFile:
             # Count
             otooley_amount = otooley_amount + 1
 
+    votes_total = len(votes)
 
     print(otooley_amount)
 

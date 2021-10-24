@@ -1,3 +1,4 @@
-# python-challenge
+# Python Challenge 
+-- This repository is for documenting my journey with 🐍
 
-This is my first commmit/push
+Date - This is my first commmit/push
